@@ -9,9 +9,9 @@ int main() {
     
 
     if(num%2==0){
-        printf("%d is Even");
+        printf("%d is Even", num);
     } else{
-        printf("%d is Odd");
+        printf("%d is Odd",num);
     } 
     return 0;
 }
