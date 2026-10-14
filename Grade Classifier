@@ -1,0 +1,24 @@
+
+#include <stdio.h>
+
+int main() {
+
+    int num;
+   
+    printf("Enter a score: ");
+     scanf("%d",&num);
+    
+
+    if(num>=90){
+        printf("Your grade is: A");
+    } else if(num>=80){
+        printf("Your grade is: B");
+    } else if(num>=70){
+        printf("Your grade is: C");
+    } else if(num>=60){
+        printf("Your grade is: D");
+    } else{
+        printf("Your grade is: F");
+    }
+    return 0;
+}
