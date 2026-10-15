@@ -1,0 +1,98 @@
+#include <stdio.h>
+
+int main(){
+
+char tc;
+float base_fare2 = 6500, a2=40, total_fare1,base_fare1,a1,total_fare2,excess_baggage_fee1,excess_baggage_fee2,zero_excess = 0;
+
+printf("Enter travel class (E-conomy/ B-usiness): ");
+scanf("%c", &tc);
+
+char*travel_class;
+float weight1, weight2;
+
+
+
+
+switch(tc){
+
+case 'E':
+travel_class = "Economy";
+    base_fare1=2500;
+    a1=20;
+
+   break;
+ 
+
+  
+
+    
+case 'e':
+travel_class = "Economy";
+ base_fare1=2500;
+    a1=20;
+   break;
+    
+case 'B':
+travel_class = "Business";
+base_fare2=6500;
+    a2=40;
+   break;
+    
+    
+case 'b':
+travel_class = "Business";
+base_fare2=6500;
+    a2=40;
+   break;
+    
+}
+
+if( tc == 'E' || tc== 'e'){
+    printf("Enter baggage weight: ");
+scanf("%f", &weight1);
+if(weight1>a1){
+excess_baggage_fee1= (weight1 - a1) * 150;
+    total_fare1= base_fare1 + excess_baggage_fee1;
+    printf("- - - -Board Summary - - - -\nTravel Class: %s\nBase Fare: Php %.2f\nBaggage Weight:%.2f kg (Allowance: %.2f kg)\nExcess Baggage Fee: Php %.2f\nTotal Fare: Php %.2f",travel_class,base_fare1,weight1,a1,excess_baggage_fee1,total_fare1);
+} else{
+    excess_baggage_fee1 = 0;
+total_fare1= base_fare1 + excess_baggage_fee1;
+    printf("- - - -Board Summary - - - -\nTravel Class: %s\nBase Fare: Php %.2f\nBaggage Weight:%.2f kg (Allowance: %.2f kg)\nExcess Baggage Fee: Php %.2f\nTotal Fare: Php %.2f",travel_class,base_fare1,weight1,a1,excess_baggage_fee1,total_fare1);}
+
+}
+    else if (tc == 'B' || tc == 'b'){
+printf("Enter baggage weight: ");
+scanf("%f", &weight2);
+    
+if(weight2>40){
+excess_baggage_fee2= (weight2 - a2) * 150;
+    total_fare2= base_fare2 + excess_baggage_fee2;
+    printf("- - - -Board Summary - - - -\nTravel Class: %s\nBase Fare: Php %.2f\nBaggage Weight:%.2f kg (Allowance: %.2f kg)\nExcess Baggage Fee: Php %.2f\nTotal Fare: Php %.2f",travel_class,base_fare2,weight2,a2,excess_baggage_fee2,total_fare2);
+} else {
+excess_baggage_fee2 = 0;
+total_fare2= base_fare2 + excess_baggage_fee2;
+    printf("- - - -Board Summary - - - -\nTravel Class: %s\nBase Fare: Php %.2f\nBaggage Weight:%.2f kg (Allowance: %.2f kg)\nExcess Baggage Fee: Php %.2f\nTotal Fare: Php %.2f",travel_class,base_fare2,weight2,a2,excess_baggage_fee2,total_fare2);}
+        
+    }else{
+        printf("Invalid");
+        }
+    return 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
